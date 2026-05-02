@@ -11,7 +11,7 @@ const UserList = () => {
        try {
         setLoading(true);
 
-         const response = await fetch("https://jsonplaceholder.typicode.com/users");
+         const response = await fetch("https://jsonplaceholder.typicode.com/users",{method:"GET"});
         const data = await response.json();
         const getFirstFive = data.slice(0,5);
         // console.log(getFirstFive)
